@@ -31,7 +31,7 @@ main {
   /* overflow: hidden; */
 }
 #main-content {
-  width: calc(100% - 70px);
+  width: 100%;
   overflow-y: auto;
 }
 
@@ -59,8 +59,35 @@ main {
   color: var(--my-bell);
 }
 
+/* content */
+.avatar {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.no-display > td:nth-child(2),
+.no-display > td:nth-child(3),
+.no-display > th:nth-child(2),
+.no-display > th:nth-child(3) {
+  display: none;
+}
+.todo-list {
+  margin: 0;
+  padding: 5px 0 5px 40px;
+}
+
+/* media query */
 @media screen and (min-width: 992px) {
   #sidebar {
     width: 150px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .no-display > td:nth-child(2),
+  .no-display > td:nth-child(3),
+  .no-display > th:nth-child(2),
+  .no-display > th:nth-child(3) {
+    display: table-cell;
   }
 }
