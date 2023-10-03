@@ -58,3 +58,9 @@ main {
 .fa-bell {
   color: var(--my-bell);
 }
+
+@media screen and (min-width: 992px) {
+  #sidebar {
+    width: 150px;
+  }
+}
