@@ -7,6 +7,7 @@ body {
   --my-bg-body: #f8f9fa;
   --my-sidebar: #0f263d;
   --my-navbar: #1b72e8;
+  --my-bell: #ff8f00;
 }
 .wrapper {
   width: 100%;
@@ -15,21 +16,45 @@ body {
 }
 header {
   width: 100%;
-  height: 70px;
+  height: 80px;
 }
 main {
   width: 100%;
-  height: calc(100% - 70px);
+  height: calc(100% - 80px);
   display: flex;
 }
 #sidebar {
-  width: 150px;
+  width: 70px;
   height: 100%;
   background-image: url(../img/sidebar-bg.png);
   background-color: var(--my-sidebar);
   /* overflow: hidden; */
 }
 #main-content {
-  width: calc(100% - 150px);
+  width: calc(100% - 70px);
   overflow-y: auto;
+}
+
+/* header */
+.my-img {
+  height: 60px;
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+  background-color: var(--my-bg-searchbar);
+}
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  border-radius: 20px;
+  text-align: center;
+  pointer-events: none;
+  background-color: var(--my-bg-searchbar);
+}
+.fa-bell {
+  color: var(--my-bell);
 }

@@ -33,12 +33,45 @@
 
   <body>
     <div class="wrapper">
-      <header class="border">
+      <header class="border d-flex align-items-center">
         <nav class="container-fluid">
-          <div class="row">
-            <div class="col-auto"></div>
-            <div class="col-auto"></div>
-            <div class="col-auto"></div>
+          <div class="row bg-white justify-content-between align-items-center">
+            <div class="col-2">
+              <img
+                class="my-img d-md-none"
+                src="img/mobile-logo.png"
+                alt="logo-mobile"
+              />
+              <img
+                class="my-img w-75 d-none d-md-block"
+                src="img/logo.svg"
+                alt="logo"
+              />
+            </div>
+            <div class="col-9 col-md-8">
+              <div class="search-container">
+                <div class="form-group has-search">
+                  <span class="fa fa-search form-control-feedback"></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Prova a cercare: Lezioni di Laravel"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-1 col-md-2">
+              <div class="d-flex justify-content-between">
+                <i class="fa-solid fa-list-ul px-1 d-none d-md-block"></i>
+                <i
+                  class="fa-solid fa-circle-question px-1 d-none d-md-block"
+                ></i>
+                <i
+                  class="fa-solid fa-ellipsis-vertical px-1 d-none d-md-block"
+                ></i>
+                <i class="fa-solid fa-bell px-1"></i>
+              </div>
+            </div>
           </div>
         </nav>
       </header>
