@@ -1,568 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- meta tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <!-- font-awesome CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- link to Font-Family and CSS Files -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Document Title -->
-    <title>Bool Dashboard</title>
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <header class="border d-flex align-items-center">
-        <nav class="container-fluid">
-          <div class="row bg-white justify-content-between align-items-center">
-            <div class="col-2">
-              <img
-                class="my-img d-lg-none"
-                src="img/mobile-logo.png"
-                alt="logo-mobile"
-              />
-              <img
-                class="my-img w-75 d-none d-lg-block"
-                src="img/logo.svg"
-                alt="logo"
-              />
-            </div>
-            <div class="col-9 col-lg-8">
-              <div class="search-container">
-                <div class="form-group has-search">
-                  <span class="fa fa-search form-control-feedback"></span>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Prova a cercare: Lezioni di Laravel"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="col-1 col-lg-2">
-              <div class="d-flex justify-content-evenly">
-                <i class="fa-solid fa-list-ul px-2 d-none d-lg-block"></i>
-                <i
-                  class="fa-solid fa-circle-question px-2 d-none d-lg-block"
-                ></i>
-                <i
-                  class="fa-solid fa-ellipsis-vertical px-2 d-none d-lg-block"
-                ></i>
-                <i class="fa-solid fa-bell px-2"></i>
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <!-- font-awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- link to Font-Family and CSS Files -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Document Title -->
+  <title>Bool Dashboard</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="border d-flex align-items-center">
+      <nav class="container-fluid">
+        <div class="row bg-white justify-content-between align-items-center">
+          <div class="col-2">
+            <img class="my-img d-lg-none" src="img/mobile-logo.png" alt="logo-mobile" />
+            <img class="my-img w-75 d-none d-lg-block" src="img/logo.svg" alt="logo" />
+          </div>
+          <div class="col-9 col-lg-8">
+            <div class="search-container">
+              <div class="form-group has-search">
+                <span class="fa fa-search form-control-feedback"></span>
+                <input type="text" class="form-control" placeholder="Prova a cercare: Lezioni di Laravel" />
               </div>
             </div>
           </div>
-        </nav>
-      </header>
-      <main>
-        <div
-          id="sidebar"
-          class="d-flex flex-column justify-content-between align-items-center py-4"
-        >
-          <ul class="px-0 list-unstyled sidebar-menu">
-            <li>
-              <a class="text-white text-decoration-none" href="#">
-                <i class="fa-solid fa-house fa-fw py-2 mx-1 text-start"></i>
-                <span class="text-capitalize d-none d-lg-inline-block px-1"
-                  >home</span
-                >
-              </a>
-            </li>
-            <li>
-              <a class="text-white text-decoration-none" href="#">
-                <i
-                  class="fa-solid fa-chart-simple fa-fw py-2 mx-1 text-start"
-                ></i>
-                <span class="text-capitalize d-none d-lg-inline-block px-1"
-                  >stats</span
-                >
-              </a>
-            </li>
-            <li>
-              <a class="text-white text-decoration-none" href="#">
-                <i class="fa-solid fa-signal fa-fw py-2 mx-1 text-start"></i>
-                <span class="text-capitalize d-none d-lg-inline-block px-1"
-                  >signals</span
-                >
-              </a>
-            </li>
-          </ul>
-          <ul class="list-unstyled sidebar-menu">
-            <li>
-              <a class="text-white text-decoration-none" href="#">
-                <i class="fa-solid fa-gear fa-fw py-2 mx-1 text-start"></i>
-                <span class="text-capitalize d-none d-lg-inline-block px-1"
-                  >admin
-                </span>
-              </a>
-            </li>
-          </ul>
+          <div class="col-1 col-lg-2">
+            <div class="d-flex justify-content-evenly">
+              <i class="fa-solid fa-list-ul px-2 d-none d-lg-block"></i>
+              <i class="fa-solid fa-circle-question px-2 d-none d-lg-block"></i>
+              <i class="fa-solid fa-ellipsis-vertical px-2 d-none d-lg-block"></i>
+              <i class="fa-solid fa-bell px-2"></i>
+            </div>
+          </div>
         </div>
-        <div id="main-content">
-          <div class="container-fluid bg-primary py-4">
-            <div class="row flex-column flex-md-row">
-              <div class="col-12 col-md-4 col-lg-6 col-xl-6 py-2">
-                <div class="text-white d-flex align-items-center">
-                  <h3>Boolean</h3>
-                  <div class="my-pills">
-                    <span class="badge rounded-pill bg-primary-subtle mx-1"
-                      >Piano blaze</span
-                    >
-                  </div>
-                </div>
-                <div class="text-white my-pills">
-                  <span class="badge rounded-pill bg-primary-subtle"
-                    >3 app</span
-                  >
-                  <i class="fa-solid fa-angles-right"></i>
-                  <div class="my-pills d-none d-lg-inline-block">
-                    <span class="badge rounded-pill bg-primary-subtle"
-                      >Boolean mobile app</span
-                    >
-                    <span class="badge rounded-pill bg-primary-subtle"
-                      >Boolean web app</span
-                    >
-                    <span class="badge rounded-pill bg-primary-subtle"
-                      >Boolean blog app</span
-                    >
-                  </div>
-                  <span class="badge rounded-pill bg-primary-subtle d-lg-none"
-                    ><i class="fa-solid fa-plus"></i
-                  ></span>
+      </nav>
+    </header>
+    <main>
+      <div id="sidebar" class="d-flex flex-column justify-content-between align-items-center py-4">
+        <ul class="px-0 list-unstyled sidebar-menu">
+          <li>
+            <a class="text-white text-decoration-none" href="#">
+              <i class="fa-solid fa-house fa-fw py-2 mx-1 text-start"></i>
+              <span class="text-capitalize d-none d-lg-inline-block px-1">home</span>
+            </a>
+          </li>
+          <li>
+            <a class="text-white text-decoration-none" href="#">
+              <i class="fa-solid fa-chart-simple fa-fw py-2 mx-1 text-start"></i>
+              <span class="text-capitalize d-none d-lg-inline-block px-1">stats</span>
+            </a>
+          </li>
+          <li>
+            <a class="text-white text-decoration-none" href="#">
+              <i class="fa-solid fa-signal fa-fw py-2 mx-1 text-start"></i>
+              <span class="text-capitalize d-none d-lg-inline-block px-1">signals</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="list-unstyled sidebar-menu">
+          <li>
+            <a class="text-white text-decoration-none" href="#">
+              <i class="fa-solid fa-gear fa-fw py-2 mx-1 text-start"></i>
+              <span class="text-capitalize d-none d-lg-inline-block px-1">admin
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="main-content">
+        <div class="container-fluid bg-primary py-4">
+          <div class="row flex-column flex-md-row">
+            <div class="col-12 col-md-4 col-lg-6 col-xl-6 py-2">
+              <div class="text-white d-flex align-items-center">
+                <h3>Boolean</h3>
+                <div class="my-pills">
+                  <span class="badge rounded-pill bg-primary-subtle mx-1">Piano blaze</span>
                 </div>
               </div>
-              <div class="col-12 col-md-4 col-lg-3 col-xl-4 text-white py-2">
-                <span class="my-font"
-                  >Studenti online negli ultimi 30 minuti</span
-                >
-                <h3>125</h3>
-              </div>
-              <div
-                class="col-12 col-md-4 col-lg-3 col-xl-2 text-white order-first order-md-0 py-2"
-              >
-                <span class="my-font">Nuovo Studente</span>
-                <a class="text-decoration-none text-white" href=""
-                  ><i
-                    class="fa-solid fa-plus border p-2 border-white rounded-2 mx-1"
-                  ></i
-                ></a>
+              <div class="text-white my-pills">
+                <span class="badge rounded-pill bg-primary-subtle">3 app</span>
+                <i class="fa-solid fa-angles-right"></i>
+                <div class="my-pills d-none d-lg-inline-block">
+                  <span class="badge rounded-pill bg-primary-subtle">Boolean mobile app</span>
+                  <span class="badge rounded-pill bg-primary-subtle">Boolean web app</span>
+                  <span class="badge rounded-pill bg-primary-subtle">Boolean blog app</span>
+                </div>
+                <span class="badge rounded-pill bg-primary-subtle d-lg-none"><i class="fa-solid fa-plus"></i></span>
               </div>
             </div>
-          </div>
-          <div class="container-fluid">
-            <div id="dashboard" class="row">
-              <div class="col-12 col-xl-8 border">
-                <div class="card my-4">
-                  <div class="card-header">
-                    <h2 class="text-light-emphasis">Prossime Classi</h2>
-                  </div>
-                  <div class="card-body">
-                    <table class="table table-hover">
-                      <thead>
-                        <tr class="text-center no-display">
-                          <th scope="col">
-                            <h6 class="text-start text-dark-emphasis">Nome</h6>
-                          </th>
-                          <th scope="col">
-                            <h6 class="text-dark-emphasis">Data Inizio</h6>
-                          </th>
-                          <th scope="col">
-                            <h6 class="text-dark-emphasis">ROI</h6>
-                          </th>
-                          <th scope="col">
-                            <h6 class="text-dark-emphasis">Stato</h6>
-                          </th>
-                          <th scope="col">
-                            <h6 class="text-dark-emphasis">Azioni</h6>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody class="fs-6">
-                        <tr class="text-center no-display">
-                          <th scope="row" class="text-start fw-normal">
-                            <img
-                              class="avatar"
-                              src="img/avatar.png"
-                              alt="avatar"
-                            />
-                            <span>Classe 75</span>
-                          </th>
-                          <td>15 Feb 2021</td>
-                          <td>20%</td>
-                          <td>
-                            <span
-                              class="badge bg-success bg-gradient text-white"
-                              >Done</span
-                            >
-                          </td>
-                          <td>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-pencil"></i
-                            ></span>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-trash-can"></i
-                            ></span>
-                          </td>
-                        </tr>
-                        <tr class="text-center no-display">
-                          <th scope="row" class="text-start fw-normal">
-                            <img
-                              class="avatar"
-                              src="img/avatar.png"
-                              alt="avatar"
-                            />
-                            <span>Classe 76</span>
-                          </th>
-                          <td>16 Feb 2021</td>
-                          <td>20%</td>
-                          <td>
-                            <span
-                              class="badge bg-success bg-gradient text-white"
-                              >Done</span
-                            >
-                          </td>
-                          <td>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-pencil"></i
-                            ></span>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-trash-can"></i
-                            ></span>
-                          </td>
-                        </tr>
-                        <tr class="text-center no-display">
-                          <th scope="row" class="text-start fw-normal">
-                            <img
-                              class="avatar"
-                              src="img/avatar.png"
-                              alt="avatar"
-                            />
-                            <span>Classe 77</span>
-                          </th>
-                          <td>17 Feb 2021</td>
-                          <td>20%</td>
-                          <td>
-                            <span
-                              class="badge bg-warning bg-gradient text-white"
-                              >process</span
-                            >
-                          </td>
-                          <td>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-pencil"></i
-                            ></span>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-trash-can"></i
-                            ></span>
-                          </td>
-                        </tr>
-                        <tr class="text-center no-display">
-                          <th scope="row" class="text-start fw-normal">
-                            <img
-                              class="avatar"
-                              src="img/avatar.png"
-                              alt="avatar"
-                            />
-                            <span>Classe 78</span>
-                          </th>
-                          <td>18 Feb 2021</td>
-                          <td>20%</td>
-                          <td>
-                            <span
-                              class="badge bg-success bg-gradient text-white"
-                              >Done</span
-                            >
-                          </td>
-                          <td>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-pencil"></i
-                            ></span>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-trash-can"></i
-                            ></span>
-                          </td>
-                        </tr>
-                        <tr class="text-center no-display">
-                          <th scope="row" class="text-start fw-normal">
-                            <img
-                              class="avatar"
-                              src="img/avatar.png"
-                              alt="avatar"
-                            />
-                            <span>Classe 79</span>
-                          </th>
-                          <td>19 Feb 2021</td>
-                          <td>20%</td>
-                          <td>
-                            <span class="badge bg-danger bg-gradient text-white"
-                              >failed</span
-                            >
-                          </td>
-                          <td>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-pencil"></i
-                            ></span>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-trash-can"></i
-                            ></span>
-                          </td>
-                        </tr>
-                        <tr class="text-center no-display">
-                          <th scope="row" class="text-start fw-normal">
-                            <img
-                              class="avatar"
-                              src="img/avatar.png"
-                              alt="avatar"
-                            />
-                            <span>Classe 80</span>
-                          </th>
-                          <td>20 Feb 2021</td>
-                          <td>20%</td>
-                          <td>
-                            <span
-                              class="badge bg-success bg-gradient text-white"
-                              >Done</span
-                            >
-                          </td>
-                          <td>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-pencil"></i
-                            ></span>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-trash-can"></i
-                            ></span>
-                          </td>
-                        </tr>
-                        <tr class="text-center no-display">
-                          <th scope="row" class="text-start fw-normal">
-                            <img
-                              class="avatar"
-                              src="img/avatar.png"
-                              alt="avatar"
-                            />
-                            <span>Classe 81</span>
-                          </th>
-                          <td>21 Feb 2021</td>
-                          <td>20%</td>
-                          <td>
-                            <span class="badge bg-danger bg-gradient text-white"
-                              >failed</span
-                            >
-                          </td>
-                          <td>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-pencil"></i
-                            ></span>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-trash-can"></i
-                            ></span>
-                          </td>
-                        </tr>
-                        <tr class="text-center no-display">
-                          <th scope="row" class="text-start fw-normal">
-                            <img
-                              class="avatar"
-                              src="img/avatar.png"
-                              alt="avatar"
-                            />
-                            <span>Classe 82</span>
-                          </th>
-                          <td>22 Feb 2021</td>
-                          <td>20%</td>
-                          <td>
-                            <span
-                              class="badge bg-success bg-gradient text-white"
-                              >Done</span
-                            >
-                          </td>
-                          <td>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-pencil"></i
-                            ></span>
-                            <span class="btn border"
-                              ><i class="fa-solid fa-trash-can"></i
-                            ></span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+            <div class="col-12 col-md-4 col-lg-3 col-xl-4 text-white py-2">
+              <span class="my-font">Studenti online negli ultimi 30 minuti</span>
+              <h3>125</h3>
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 col-xl-2 text-white order-first order-md-0 py-2">
+              <span class="my-font">Nuovo Studente</span>
+              <button class="btn btn-primary p-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <i class="fa-solid fa-plus border p-2 border-white rounded-2 mx-1"></i>
+              </button>
+              <div class="offcanvas w-100 offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                    Inserisci un nuovo studente
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="card my-4">
-                  <div class="card-header">
-                    <h2 class="text-light-emphasis">F.A.Q.</h2>
-                  </div>
-                  <div class="accordion" id="accordion">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseOne"
-                          aria-expanded="false"
-                          aria-controls="collapseOne"
-                        >
-                          Come aggiungere un nuovo studente?
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseOne"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample"
-                      >
-                        <div class="accordion-body">
-                          Clicca sul + in alto nella sezione blu.
+                <div class="offcanvas-body">
+                  <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-6">
+                      <label for="validationName" class="form-label">Nome</label>
+                      <input type="text" class="form-control" id="validationName" value="" required />
+                      <div class="valid-feedback">nome valido</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationLastName" class="form-label">Cognome</label>
+                      <input type="text" class="form-control" id="validationLastName" value="" required />
+                      <div class="valid-feedback">cognome valido</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationEmail" class="form-label">Email</label>
+                      <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="validationEmail"
+                          aria-describedby="inputGroupPrepend" required />
+                        <div class="invalid-feedback">
+                          Email invalida, si prega di verificare.
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseTwo"
-                          aria-expanded="false"
-                          aria-controls="collapseTwo"
-                        >
-                          Come posso accedere alle informazioni del mio account?
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseTwo"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample"
-                      >
-                        <div class="accordion-body">
-                          Clicca sull'icona della campanella.
+                    <div class="col-md-6">
+                      <label for="validationPassowrd" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="validationPassowrd" required />
+                      <div class="invalid-feedback">
+                        Sicurezza password insufficiente.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationEmailBis" class="form-label">Indirizzo Email</label>
+                      <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="validationEmailBis"
+                          aria-describedby="inputGroupPrepend" required />
+                        <div class="invalid-feedback">
+                          Email invalida, si prega di verificare.
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseThree"
-                          aria-expanded="false"
-                          aria-controls="collapseThree"
-                        >
-                          Posso usare questa dashboard da mobile?
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseThree"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample"
-                      >
-                        <div class="accordion-body">
-                          Certamente, la dashboard è adattabile a tutti i
-                          dispositivi.
+                    <div class="col-md-6">
+                      <label for="validationPasswordBis" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="validationPasswordBis" required />
+                      <div class="invalid-feedback">
+                        Sicurezza password insufficiente.
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="validationLocation" class="form-label">Indirizzo</label>
+                      <div class="input-group has-validation">
+                        <input type="text" class="form-control" id="validationLocation"
+                          aria-describedby="inputGroupPrepend" required />
+                        <div class="invalid-feedback">
+                          Indirizzo invalido, si prega di verificare.
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-xl-4 border">
-                <div class="card my-4">
-                  <div class="card-header">
-                    <h2 class="text-light-emphasis">Todo</h2>
-                  </div>
-                  <div class="card-body">
-                    <div class="card">
-                      <div class="form-check border border-light-subtle m-0">
-                        <input
-                          class="form-check-label"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                        <label class="form-check-label" for="flexCheckDefault">
-                          Kickoff nuove classi
-                        </label>
-                      </div>
-                      <div class="form-check border border-light-subtle m-0">
-                        <input
-                          class="form-check-label"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckChecked"
-                        />
-                        <label class="form-check-label" for="flexCheckChecked">
-                          Lezione su Bootstrap 5 in classe #75
-                        </label>
-                      </div>
-                      <div class="form-check border border-light-subtle m-0">
-                        <input
-                          class="form-check-label"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckChecked"
-                        />
-                        <label class="form-check-label" for="flexCheckChecked">
-                          Controllare username github studenti
-                        </label>
+                    <div class="col-md-6">
+                      <label for="validationCity3" class="form-label">Città</label>
+                      <input type="text" class="form-control" id="validationCity" required />
+                      <div class="invalid-feedback">
+                        Nome inserito invalido, si prega di verificare.
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="card my-4">
-                  <img src="img/stats.jpeg" class="card-img-top" alt="stats" />
-                  <div class="card-body">
-                    <h5 class="card-title">Utenti attivi</h5>
-                    <p class="card-text">
-                      Lista degli ultimi attivi in piattaforma nell'ultimo mese
-                    </p>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Gennaio: 1200</li>
-                    <li class="list-group-item">Febbraio: 800</li>
-                    <li class="list-group-item">Marzo: 1500</li>
-                  </ul>
-                  <div class="card-body">
-                    <a href="#" class="card-link"
-                      >Visualizza report approfondito</a
-                    >
-                  </div>
+                    <div class="col-md-3">
+                      <label for="validationState" class="form-label">Stato</label>
+                      <select class="form-select" id="validationState" required>
+                        <option selected disabled value="">Scegli...</option>
+                        <option>...</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Si prega di selezionare un'opzione
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationCap" class="form-label">CAP</label>
+                      <input type="text" class="form-control" id="validationCap" required />
+                      <div class="invalid-feedback">
+                        Si prega di inserire un CAP valido.
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="validationFile" class="form-label">Foto</label>
+                      <div class="input-group has-validation">
+                        <div class="input-group mb-3">
+                          <button class="input-group-text" type="button" id="button-addon1">Scegli
+                            File</button>
+                          <input type="text" class="form-control" placeholder="Nessun file selezionato"
+                            id="validationFile" aria-label="Example text with button addon"
+                            aria-describedby="button-addon1 required">
+                        </div>
+                        <div class="invalid-feedback">
+                          File invalido o non selezionato, si prega di verificare.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                        <label class="form-check-label" for="invalidCheck">
+                          Seleziona per proseguire
+                        </label>
+                        <div class="invalid-feedback">
+                          Spunta necessaria per proseguire.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit">
+                        Salva
+                      </button>
+                      <button class="btn btn-warning" type="reset">
+                        Svuota
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </main>
+        <div class="container-fluid">
+          <div id="dashboard" class="row">
+            <div class="col-12 col-xl-8 border">
+              <div class="card my-4">
+                <div class="card-header">
+                  <h2 class="text-light-emphasis">Prossime Classi</h2>
+                </div>
+                <div class="card-body">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr class="text-center no-display">
+                        <th scope="col">
+                          <h6 class="text-start text-dark-emphasis">Nome</h6>
+                        </th>
+                        <th scope="col">
+                          <h6 class="text-dark-emphasis">Data Inizio</h6>
+                        </th>
+                        <th scope="col">
+                          <h6 class="text-dark-emphasis">ROI</h6>
+                        </th>
+                        <th scope="col">
+                          <h6 class="text-dark-emphasis">Stato</h6>
+                        </th>
+                        <th scope="col">
+                          <h6 class="text-dark-emphasis">Azioni</h6>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="fs-6">
+                      <tr class="text-center no-display">
+                        <th scope="row" class="text-start fw-normal">
+                          <img class="avatar" src="img/avatar.png" alt="avatar" />
+                          <span>Classe 75</span>
+                        </th>
+                        <td>15 Feb 2021</td>
+                        <td>20%</td>
+                        <td>
+                          <span class="badge bg-success bg-gradient text-white">Done</span>
+                        </td>
+                        <td>
+                          <span class="btn border"><i class="fa-solid fa-pencil"></i></span>
+                          <span class="btn border"><i class="fa-solid fa-trash-can"></i></span>
+                        </td>
+                      </tr>
+                      <tr class="text-center no-display">
+                        <th scope="row" class="text-start fw-normal">
+                          <img class="avatar" src="img/avatar.png" alt="avatar" />
+                          <span>Classe 76</span>
+                        </th>
+                        <td>16 Feb 2021</td>
+                        <td>20%</td>
+                        <td>
+                          <span class="badge bg-success bg-gradient text-white">Done</span>
+                        </td>
+                        <td>
+                          <span class="btn border"><i class="fa-solid fa-pencil"></i></span>
+                          <span class="btn border"><i class="fa-solid fa-trash-can"></i></span>
+                        </td>
+                      </tr>
+                      <tr class="text-center no-display">
+                        <th scope="row" class="text-start fw-normal">
+                          <img class="avatar" src="img/avatar.png" alt="avatar" />
+                          <span>Classe 77</span>
+                        </th>
+                        <td>17 Feb 2021</td>
+                        <td>20%</td>
+                        <td>
+                          <span class="badge bg-warning bg-gradient text-white">process</span>
+                        </td>
+                        <td>
+                          <span class="btn border"><i class="fa-solid fa-pencil"></i></span>
+                          <span class="btn border"><i class="fa-solid fa-trash-can"></i></span>
+                        </td>
+                      </tr>
+                      <tr class="text-center no-display">
+                        <th scope="row" class="text-start fw-normal">
+                          <img class="avatar" src="img/avatar.png" alt="avatar" />
+                          <span>Classe 78</span>
+                        </th>
+                        <td>18 Feb 2021</td>
+                        <td>20%</td>
+                        <td>
+                          <span class="badge bg-success bg-gradient text-white">Done</span>
+                        </td>
+                        <td>
+                          <span class="btn border"><i class="fa-solid fa-pencil"></i></span>
+                          <span class="btn border"><i class="fa-solid fa-trash-can"></i></span>
+                        </td>
+                      </tr>
+                      <tr class="text-center no-display">
+                        <th scope="row" class="text-start fw-normal">
+                          <img class="avatar" src="img/avatar.png" alt="avatar" />
+                          <span>Classe 79</span>
+                        </th>
+                        <td>19 Feb 2021</td>
+                        <td>20%</td>
+                        <td>
+                          <span class="badge bg-danger bg-gradient text-white">failed</span>
+                        </td>
+                        <td>
+                          <span class="btn border"><i class="fa-solid fa-pencil"></i></span>
+                          <span class="btn border"><i class="fa-solid fa-trash-can"></i></span>
+                        </td>
+                      </tr>
+                      <tr class="text-center no-display">
+                        <th scope="row" class="text-start fw-normal">
+                          <img class="avatar" src="img/avatar.png" alt="avatar" />
+                          <span>Classe 80</span>
+                        </th>
+                        <td>20 Feb 2021</td>
+                        <td>20%</td>
+                        <td>
+                          <span class="badge bg-success bg-gradient text-white">Done</span>
+                        </td>
+                        <td>
+                          <span class="btn border"><i class="fa-solid fa-pencil"></i></span>
+                          <span class="btn border"><i class="fa-solid fa-trash-can"></i></span>
+                        </td>
+                      </tr>
+                      <tr class="text-center no-display">
+                        <th scope="row" class="text-start fw-normal">
+                          <img class="avatar" src="img/avatar.png" alt="avatar" />
+                          <span>Classe 81</span>
+                        </th>
+                        <td>21 Feb 2021</td>
+                        <td>20%</td>
+                        <td>
+                          <span class="badge bg-danger bg-gradient text-white">failed</span>
+                        </td>
+                        <td>
+                          <span class="btn border"><i class="fa-solid fa-pencil"></i></span>
+                          <span class="btn border"><i class="fa-solid fa-trash-can"></i></span>
+                        </td>
+                      </tr>
+                      <tr class="text-center no-display">
+                        <th scope="row" class="text-start fw-normal">
+                          <img class="avatar" src="img/avatar.png" alt="avatar" />
+                          <span>Classe 82</span>
+                        </th>
+                        <td>22 Feb 2021</td>
+                        <td>20%</td>
+                        <td>
+                          <span class="badge bg-success bg-gradient text-white">Done</span>
+                        </td>
+                        <td>
+                          <span class="btn border"><i class="fa-solid fa-pencil"></i></span>
+                          <span class="btn border"><i class="fa-solid fa-trash-can"></i></span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card my-4">
+                <div class="card-header">
+                  <h2 class="text-light-emphasis">F.A.Q.</h2>
+                </div>
+                <div class="accordion" id="accordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Come aggiungere un nuovo studente?
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Clicca sul + in alto nella sezione blu.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Come posso accedere alle informazioni del mio account?
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Clicca sull'icona della campanella.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Posso usare questa dashboard da mobile?
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Certamente, la dashboard è adattabile a tutti i
+                        dispositivi.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-4 border">
+              <div class="card my-4">
+                <div class="card-header">
+                  <h2 class="text-light-emphasis">Todo</h2>
+                </div>
+                <div class="card-body">
+                  <div class="card">
+                    <div class="form-check border border-light-subtle m-0 py-1">
+                      <input class="form-check-label" type="checkbox" value="" id="flexCheckDefault" />
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Kickoff nuove classi
+                      </label>
+                    </div>
+                    <div class="form-check border border-light-subtle m-0 py-1">
+                      <input class="form-check-label" type="checkbox" value="" id="flexCheckChecked" />
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Lezione su Bootstrap 5 in classe #75
+                      </label>
+                    </div>
+                    <div class="form-check border border-light-subtle m-0 py-1">
+                      <input class="form-check-label" type="checkbox" value="" id="flexCheckChecked" />
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Controllare username github studenti
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card my-4">
+                <img src="img/stats.jpeg" class="card-img-top" alt="stats" />
+                <div class="card-body">
+                  <h5 class="card-title">Utenti attivi</h5>
+                  <p class="card-text">
+                    Lista degli ultimi attivi in piattaforma nell'ultimo mese
+                  </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Gennaio: 1200</li>
+                  <li class="list-group-item">Febbraio: 800</li>
+                  <li class="list-group-item">Marzo: 1500</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Visualizza report approfondito</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-      <footer></footer>
+    <footer></footer>
 
-      <!-- Bootstrap JS -->
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"
-      ></script>
-    </div>
-  </body>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+  </div>
+</body>
+
 </html>
