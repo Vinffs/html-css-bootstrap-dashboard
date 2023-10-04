@@ -83,6 +83,11 @@ main {
 .my-pills {
   font-size: 0.9em;
 }
+.fa-solid.fa-plus:hover {
+  background-color: var(--my-bg-body);
+  color: black;
+  transition: all 0.3s;
+}
 /* media query */
 @media screen and (min-width: 768px) {
   .no-display > td:nth-child(2),
