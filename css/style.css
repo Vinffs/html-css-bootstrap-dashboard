@@ -71,10 +71,6 @@ main {
 .no-display > th:nth-child(3) {
   display: none;
 }
-.todo-list {
-  margin: 0;
-  padding: 5px 0 5px 40px;
-}
 
 /* hover sidebar */
 .sidebar-menu li:hover {
@@ -82,18 +78,22 @@ main {
   transition: all 0.3s;
 }
 
-/* media query */
-@media screen and (min-width: 992px) {
-  #sidebar {
-    width: 150px;
-  }
+/* navbar main content */
+.my-font,
+.my-pills {
+  font-size: 0.9em;
 }
-
+/* media query */
 @media screen and (min-width: 768px) {
   .no-display > td:nth-child(2),
   .no-display > td:nth-child(3),
   .no-display > th:nth-child(2),
   .no-display > th:nth-child(3) {
     display: table-cell;
+  }
+}
+@media screen and (min-width: 992px) {
+  #sidebar {
+    width: 150px;
   }
 }

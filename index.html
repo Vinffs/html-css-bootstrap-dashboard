@@ -83,8 +83,8 @@
           <ul class="px-0 list-unstyled sidebar-menu">
             <li>
               <a class="text-white text-decoration-none" href="#">
-                <i class="fa-solid fa-house fa-fw py-2 ps-2 text-start"></i>
-                <span class="text-capitalize px-3 d-none d-lg-inline-block"
+                <i class="fa-solid fa-house fa-fw py-2 mx-1 text-start"></i>
+                <span class="text-capitalize d-none d-lg-inline-block"
                   >home</span
                 >
               </a>
@@ -92,17 +92,17 @@
             <li>
               <a class="text-white text-decoration-none" href="#">
                 <i
-                  class="fa-solid fa-chart-simple fa-fw py-2 ps-2 text-start"
+                  class="fa-solid fa-chart-simple fa-fw py-2 mx-1 text-start"
                 ></i>
-                <span class="text-capitalize px-3 d-none d-lg-inline-block"
+                <span class="text-capitalize d-none d-lg-inline-block"
                   >stats</span
                 >
               </a>
             </li>
             <li>
               <a class="text-white text-decoration-none" href="#">
-                <i class="fa-solid fa-signal fa-fw py-2 ps-2 text-start"></i>
-                <span class="text-capitalize px-3 d-none d-lg-inline-block"
+                <i class="fa-solid fa-signal fa-fw py-2 mx-1 text-start"></i>
+                <span class="text-capitalize d-none d-lg-inline-block"
                   >signals</span
                 >
               </a>
@@ -111,8 +111,8 @@
           <ul class="list-unstyled sidebar-menu">
             <li>
               <a class="text-white text-decoration-none" href="#">
-                <i class="fa-solid fa-gear fa-fw py-2 ps-2 text-start"></i>
-                <span class="text-capitalize px-3 d-none d-lg-inline-block"
+                <i class="fa-solid fa-gear fa-fw py-2 mx-1 text-start"></i>
+                <span class="text-capitalize d-none d-lg-inline-block"
                   >admin
                 </span>
               </a>
@@ -120,11 +120,54 @@
           </ul>
         </div>
         <div id="main-content">
-          <div class="container-fluid bg-primary">
-            <div class="row">
-              <div class="col">1</div>
-              <div class="col">2</div>
-              <div class="col">3</div>
+          <div class="container-fluid bg-primary py-4">
+            <div class="row flex-column flex-md-row">
+              <div class="col-12 col-md-4 col-lg-6 col-xl-6 py-2">
+                <div class="text-white d-flex align-items-center">
+                  <h3>Boolean</h3>
+                  <div class="my-pills">
+                    <span class="badge rounded-pill bg-primary-subtle mx-1"
+                      >Piano blaze</span
+                    >
+                  </div>
+                </div>
+                <div class="text-white my-pills">
+                  <span class="badge rounded-pill bg-primary-subtle"
+                    >3 app</span
+                  >
+                  <i class="fa-solid fa-angles-right"></i>
+                  <div class="my-pills d-none d-lg-inline-block">
+                    <span class="badge rounded-pill bg-primary-subtle"
+                      >Boolean mobile app</span
+                    >
+                    <span class="badge rounded-pill bg-primary-subtle"
+                      >Boolean web app</span
+                    >
+                    <span class="badge rounded-pill bg-primary-subtle"
+                      >Boolean blog app</span
+                    >
+                  </div>
+                  <span class="badge rounded-pill bg-primary-subtle d-lg-none"
+                    ><i class="fa-solid fa-plus"></i
+                  ></span>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 text-white py-2">
+                <span class="my-font"
+                  >Studenti online negli ultimi 30 minuti</span
+                >
+                <h3>125</h3>
+              </div>
+              <div
+                class="col-12 col-md-4 col-lg-3 col-xl-2 text-white order-first order-md-0 py-2"
+              >
+                <span class="my-font">Nuovo Studente</span>
+                <a class="text-decoration-none text-white" href=""
+                  ><i
+                    class="fa-solid fa-plus border p-2 border-white rounded-2 mx-1"
+                  ></i
+                ></a>
+              </div>
             </div>
           </div>
           <div class="container-fluid">
@@ -374,11 +417,11 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header">
                         <button
-                          class="accordion-button"
+                          class="accordion-button collapsed"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapseOne"
-                          aria-expanded="true"
+                          aria-expanded="false"
                           aria-controls="collapseOne"
                         >
                           Come aggiungere un nuovo studente?
@@ -386,7 +429,7 @@
                       </h2>
                       <div
                         id="collapseOne"
-                        class="accordion-collapse collapse show"
+                        class="accordion-collapse collapse"
                         data-bs-parent="#accordionExample"
                       >
                         <div class="accordion-body">
@@ -451,11 +494,9 @@
                   </div>
                   <div class="card-body">
                     <div class="card">
-                      <div
-                        class="form-check border border-light-subtle todo-list"
-                      >
+                      <div class="form-check border border-light-subtle m-0">
                         <input
-                          class="form-check-input"
+                          class="form-check-label"
                           type="checkbox"
                           value=""
                           id="flexCheckDefault"
@@ -464,29 +505,23 @@
                           Kickoff nuove classi
                         </label>
                       </div>
-                      <div
-                        class="form-check border border-light-subtle todo-list"
-                      >
+                      <div class="form-check border border-light-subtle m-0">
                         <input
-                          class="form-check-input"
+                          class="form-check-label"
                           type="checkbox"
                           value=""
                           id="flexCheckChecked"
-                          checked
                         />
                         <label class="form-check-label" for="flexCheckChecked">
                           Lezione su Bootstrap 5 in classe #75
                         </label>
                       </div>
-                      <div
-                        class="form-check border border-light-subtle todo-list"
-                      >
+                      <div class="form-check border border-light-subtle m-0">
                         <input
-                          class="form-check-input"
+                          class="form-check-label"
                           type="checkbox"
                           value=""
                           id="flexCheckChecked"
-                          checked
                         />
                         <label class="form-check-label" for="flexCheckChecked">
                           Controllare username github studenti
